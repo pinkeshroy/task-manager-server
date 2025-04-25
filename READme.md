@@ -172,7 +172,38 @@ npm test
 - **Auth Routes:** `/api/auth`
 - **Task Routes:** `/api/tasks`
 
-> Full API docs coming soon 🚀
+## 📢 Sample cURL Commands
+
+### ✅ Endpoint (Live)
+
+```
+curl --location 'https://job-tracker-server-jpfy.onrender.com/'
+```
+
+### 🔑 Register User
+
+```
+curl -X POST https://task-manager-server-mnt4.onrender.com/api/auth/register \
+     -H "Content-Type: application/json" \
+     -d '{"email":"testuser@example.com", "password":"Password123"}'
+```
+
+### 🔐 Login User
+
+```
+curl -X POST https://task-manager-server-mnt4.onrender.com/api/auth/login \
+     -H "Content-Type: application/json" \
+     -d '{"email":"testuser@example.com", "password":"Password123"}'
+```
+
+### 📅 Create Task
+
+```
+curl -X POST https://task-manager-server-mnt4.onrender.com/api/tasks \
+     -H "Content-Type: application/json" \
+     -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
+     -d '{"title":"New Task","description":"This is a new task."}'
+```
 
 ---
 
